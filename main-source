@@ -1,4 +1,7 @@
-int putkey(void)
+#include <mega32.h>
+#include <alcd.h>
+
+    int putkey(void)
 {
     PORTC.0=0; PORTC.1=1; PORTC.2=1; PORTC.3=1;
     if(!PINC.4) return 1;
